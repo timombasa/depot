@@ -1,7 +1,6 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-coffeescript:
+one:
   title: Coffeescript
   description:
     CoffeeScript is JavaScript done right. It provides all

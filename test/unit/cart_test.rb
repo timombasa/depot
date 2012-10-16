@@ -5,7 +5,7 @@ class CartTest < ActiveSupport::TestCase
 
   test "add unique products" do
     cart = Cart.create
-    coffeescript_Book = products(:coffeescript)
+    coffeescript_Book = products(:one)
     rails_Book = products(:railstest)
 
     cart.add_product(rails_Book.id).save!
