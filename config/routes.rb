@@ -7,7 +7,6 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 Depot::Application.routes.draw do
-
   resources :orders
 
   resources :line_items do
@@ -17,11 +16,10 @@ Depot::Application.routes.draw do
   end
 
   resources :carts
-
   get "store/index"
-
-  resources :products
-
+  resources :products do
+    get :who_bought, on: :member
+  end
   # ...
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -69,7 +67,6 @@ Depot::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
